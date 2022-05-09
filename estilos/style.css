@@ -16,6 +16,10 @@ html {
 *, *:before, *:after {
     box-sizing: inherit;
 }
+/* body {
+    width: auto;
+    background-color: var(--beige);
+} */
 p {
     font-family: var(--fuenteParrafos);
 }
@@ -52,15 +56,19 @@ h4 {
 }
 
 /* HEADER */
-
+@media (min-width: 768px) {
+    .contenedorHeader {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem 1rem 0.5rem 1rem;
+    }
+}
 .header {
     background-color: var(--verdeClaro);
 }
 .contenedorHeader {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.5rem 1rem 0.5rem 1rem;
+    text-align: center;
 }
 .logo {
     text-transform: uppercase;
@@ -73,42 +81,24 @@ h4 {
 }
 .navegacion {
     display: flex;
+    justify-content: center;
     gap: 1.5rem;
     list-style: none;
 }
 
 /* MAIN INDEX */
 
-.contenidoIndex {
-    background-color: var(--beige);
-    text-align: center;
+.contenidoIndex{
+    display: flex;
+    flex-direction: column;
     padding: 0.5rem;
     border: 0.2rem solid var(--verdeOscuro);
     border-radius: 1rem;
-    margin: 1rem;
     text-transform: uppercase;
-    display: grid;
-    grid-template-columns: repeat(2, 2fr);
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: 
-    "kettlebell nordic"
-    "kayak kayak"
-    ;
-    row-gap: 0.5rem;
-}
-
-.kettlebell {
-    grid-area: kettlebell;
-}
-.nordic {
-    grid-area: nordic;
-}
-.kayak {
-    grid-area: kayak;
+    
 }
 .beige {
     background-color: var(--beige);
-    padding-bottom: 1rem;
 }
 .kettlebellImg {
     max-height: 25rem;
@@ -116,29 +106,83 @@ h4 {
 .nordicImg {
     max-height: 25rem;
 }
+.kayakImg {
+    width: 60%;
+}
+
+@media (min-width: 768px) {
+    .beige {
+        background-color: var(--beige);
+    }
+    
+    .contenidoIndex {
+        background-color: var(--beige);
+        text-align: center;
+        padding: 0.5rem;
+        border: 0.2rem solid var(--verdeOscuro);
+        border-radius: 1rem;
+        
+        text-transform: uppercase;
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "kettlebell nordic"
+        "kayak kayak"
+        ;
+    }
+    .kettlebell {
+        grid-area: kettlebell;
+    }
+    .nordic {
+        grid-area: nordic;
+    }
+    .kayak {
+        grid-area: kayak;
+    }
+    .kettlebellImg {
+        max-height: 25rem;
+    }
+    .nordicImg {
+        max-height: 25rem;
+        
+    }
+    .kayakImg {
+        max-width: 50%;
+    }
+}
 
 /* PAQUETES */
 .contenidoPaquetes {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-areas: 
-    "kettlebell kayak nordic"
-    ;
-    column-gap: 1rem;
+    padding-bottom: 1rem;
     margin-left: 1rem;
     margin-right: 1rem;
-    margin-bottom: 1rem;
-    
+    background-color: var(--beige);
 }
 .texto-paquetes {
     font-size: 1.2rem;
-    margin: 1rem;
     
 }
 .bordePaquetes {
     border: 3px solid var(--verdeOscuro);
     border-radius: 1rem;
     padding: 0.5rem;
+}
+.kayakImgPaquetes {
+    width: 100%;
+}
+@media (min-width: 768px) {
+    .contenidoPaquetes {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: 
+        "kettlebell kayak nordic"
+        ;
+        column-gap: 1rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    
 }
 
 /* OBJETIVO Y NOSOTROS */
@@ -153,31 +197,68 @@ h4 {
 
 /* CONTACTO */
 
-.formulario {
-    background-image: url(../img/hoja.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: 2rem 15rem 2rem 15rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.campo {
-    display: flex;
-    flex-direction: column;
-    border: 2px solid var(--verdeOscuro);
-    padding: 1.5rem;
-    font-size: 2rem;
-    font-family: var(--fuenteHeading);
-    margin: 1rem;
+@media (min-width: 700px) {
+    .campo {
+        display: flex;
+        flex-direction: column;
+        border: 2px solid var(--verdeOscuro);
+        padding: 1.5rem;
+        font-size: 2rem;
+        font-family: var(--fuenteHeading);
+        margin: 1rem;
     
+        background-image: url(../img/hoja.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 2rem 15rem 2rem 15rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: auto;
+        
+    }
+    .campo-label {
+        width: 90%;
+    }
+    .campo-input {
+        width: 90%;
+        height: 2rem;
+    }
+    .campo-textarea {
+        width: 90%;
+        height: 10rem;
+    }
+    .boton {
+        font-family: var(--fuenteHeading);
+        color: var(--blanco);
+        background-color: var(--verdeOscuro);
+        font-size: 1rem;
+        text-align: center;
+        padding: 1rem;
+        font-size: 1.8rem;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+        border: none;
+        cursor: pointer;
+    }
+}
+.formulario {
+        display: flex;
+        flex-direction: column;
+        border: 2px solid var(--verdeOscuro);
+        padding: 1.5rem;
+        font-size: 2rem;
+        font-family: var(--fuenteHeading);
+}
+.campo-label {
+    width: 90%;
 }
 .campo-input {
-    width: 20rem;
+    width: 90%;
     height: 2rem;
 }
 .campo-textarea {
-    width: 20rem;
+    width: 90%;
     height: 10rem;
 }
 .boton {
@@ -210,10 +291,16 @@ h4 {
 /* MOVIMIENTOS KAYAK */
 .movimientos-imagen-kayak {
     max-height: 30rem;
+    width: 100%;
 }
 /* MOVIMIENTOS KETTLEBELL */
 .movimientos-imagen-kettlebell {
     max-height: 30rem;
+    width: 100%;
+}
+/* MOVIMIENTOS NORDIC */
+.movimientos-imagen-nordic {
+    width: 100%;
 }
 /* FOOTER */
 .contenedorFooter {
