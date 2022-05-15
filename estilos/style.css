@@ -161,7 +161,6 @@ h4 {
 }
 .texto-paquetes {
     font-size: 1.2rem;
-    
 }
 .bordePaquetes {
     border: 3px solid var(--verdeOscuro);
@@ -241,6 +240,7 @@ h4 {
         border: none;
         cursor: pointer;
     }
+    
 }
 .formulario {
         display: flex;
@@ -264,7 +264,8 @@ h4 {
 .boton {
     font-family: var(--fuenteHeading);
     color: var(--blanco);
-    background-color: var(--verdeOscuro);
+    background-color: var(--verdeClaro);
+    color: var(--verdeOscuro);
     font-size: 1rem;
     text-align: center;
     padding: 1rem;
@@ -273,6 +274,11 @@ h4 {
     margin-bottom: 1rem;
     border: none;
     cursor: pointer;
+}
+.boton:hover {
+    transition: 1s;
+    background-color: var(--verdeOscuro);
+    color: var(--verdeClaro);
 }
 
 /* MOVIMIENTOS */
