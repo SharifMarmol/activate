@@ -194,6 +194,11 @@ h4 {
     font-size: 2rem;
 }
 
+/* .tamaño-carousel {
+    width: 80%;
+    ali
+} */
+
 /* CONTACTO */
 
 @media (min-width: 700px) {
@@ -246,6 +251,7 @@ h4 {
         display: flex;
         flex-direction: column;
         border: 2px solid var(--verdeOscuro);
+        border-radius: 1rem;
         padding: 1.5rem;
         font-size: 2rem;
         font-family: var(--fuenteHeading);
@@ -311,6 +317,7 @@ h4 {
 /* FOOTER */
 .contenedorFooter {
     background-color: var(--verdeClaro);
+    
 }
 .redesSociales {
     display: flex;
