@@ -64,6 +64,12 @@ h4 {
         padding: 0.5rem 1rem 0.5rem 1rem;
     }
 }
+@media (max-width: 500px) {
+    .nav {
+        display: flex;
+        flex-direction: column;
+    }
+}
 .header {
     background-color: var(--verdeClaro);
 }
@@ -246,6 +252,17 @@ h4 {
         cursor: pointer;
     }
     
+}
+@media (max-width: 700px) {
+    .campo {
+        display: flex;
+        flex-direction: column;
+        border: 2px solid var(--verdeOscuro);
+        border-radius: 1rem;
+        padding: 1.5rem;
+        font-size: 2rem;
+        font-family: var(--fuenteHeading);
+    }
 }
 .formulario {
         display: flex;
