@@ -1,0 +1,105 @@
+/* HEADER */
+@media (min-width: 768px) {
+    .contenedorHeader {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem 1rem 0.5rem 1rem;
+    }
+}
+@media (max-width: 500px) {
+    .nav {
+        display: flex;
+        flex-direction: column;
+    }
+}
+.header {
+    background-color: $verdeClaro;
+
+    .nav-link {
+        color: $negro;
+    }
+
+    .contenedorHeader {
+        text-align: center;
+    }
+
+    .logo {
+        text-transform: uppercase;
+    
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+    
+}
+
+/* MAIN INDEX */
+
+.beige {
+    background-color: $beige;
+
+    .contenidoIndex{
+        display: flex;
+        flex-direction: column;
+        padding: 0.5rem;
+        border: 0.2rem solid $verdeOscuro;
+        border-radius: 1rem;
+        text-transform: uppercase;
+        
+    }
+    
+    .kettlebellImg {
+        max-height: 25rem;
+    }
+    .nordicImg {
+        max-height: 25rem;
+    }
+    .kayakImg {
+        width: 60%;
+    }
+    
+}
+
+@media (min-width: 768px) {
+    .beige {
+        background-color: $beige;
+
+        .contenidoIndex {
+            background-color: $beige;
+            text-align: center;
+            padding: 0.5rem;
+            border: 0.2rem solid $verdeOscuro;
+            border-radius: 1rem;
+            
+            
+            text-transform: uppercase;
+            display: grid;
+            grid-template-columns: repeat(2, 2fr);
+            grid-template-rows: 1fr 1fr;
+            grid-template-areas: 
+            "kettlebell nordic"
+            "kayak kayak"
+            ;
+        }
+        .kettlebell {
+            grid-area: kettlebell;
+        }
+        .nordic {
+            grid-area: nordic;
+        }
+        .kayak {
+            grid-area: kayak;
+        }
+        .kettlebellImg {
+            max-height: 25rem;
+        }
+        .nordicImg {
+            max-height: 25rem;
+        }
+        .kayakImg {
+            max-width: 50%;
+        }
+    }
+
+}

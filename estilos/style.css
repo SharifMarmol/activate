@@ -1,294 +1,302 @@
-:root {
-
-    --negro: #000000;
-    --blanco: #ffffff;
-    --marron: rgb(54, 39, 6);
-    --verdeOscuro: rgb(70, 78, 46);
-    --verdeClaro: rgb(172, 185, 146);
-    --beige: rgb(233, 229, 214);
-
-    --fuenteHeading: 'PT Sans', sans-serif;
-    --fuenteParrafos: 'Open Sans', sans-serif;
-}
 html {
-    box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
+
 *, *:before, *:after {
-    box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
 }
-/* body {
-    width: auto;
-    background-color: var(--beige);
-} */
+
 p {
-    font-family: var(--fuenteParrafos);
+  font-family: "Open Sans", sans-serif;
 }
-h1,h2,h3,h4 {
-    font-family: var(--fuenteHeading);
+
+h1, h2, h3, h4, h5 {
+  font-family: "PT Sans", sans-serif;
+  margin-bottom: 0;
+  font-weight: 550;
 }
+
 a {
-    font-family: var(--fuenteParrafos);
-    text-decoration: none;
-    font-size: 1.5rem;
+  font-family: "Open Sans", sans-serif;
+  text-decoration: none;
+  font-size: 1.5rem;
 }
+
 figcaption {
-    font-family: var(--fuenteHeading);
+  font-family: "PT Sans", sans-serif;
+  color: #000000;
+  font-weight: 550;
 }
+
 h1 {
-    font-size: 3rem;
+  font-size: 3rem;
+  color: #000000;
 }
+
 h2 {
-    font-size: 2.8rem;
+  font-size: 2.8rem;
 }
+
 h3 {
-    font-size: 2.6rem;
+  font-size: 2.6rem;
 }
+
 h4 {
-    font-size: 2.2rem;
+  font-size: 2.2rem;
 }
+
 * {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 .centrar-texto {
-    text-align: center;
+  text-align: center;
+}
+
+/* FOOTER */
+.contenedorFooter {
+  background-color: #acb992;
+}
+
+.contenedorFooter .iconoPng {
+  height: 2.5rem;
+}
+
+.redesSociales {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  text-align: center;
 }
 
 /* HEADER */
 @media (min-width: 768px) {
-    .contenedorHeader {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0.5rem 1rem 0.5rem 1rem;
-    }
-}
-@media (max-width: 500px) {
-    .nav {
-        display: flex;
-        flex-direction: column;
-    }
-}
-.header {
-    background-color: var(--verdeClaro);
-}
-.contenedorHeader {
-    text-align: center;
-}
-.logo {
-    text-transform: uppercase;
-}
-.logo:hover {
-    transform: scale(1.1);
-}
-.navegacion_enlace:hover {
-    transform: scale(1.1);
-}
-.navegacion {
+  .contenedorHeader {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    list-style: none;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.header {
+  background-color: #acb992;
+}
+
+.header .nav-link {
+  color: #000000;
+}
+
+.header .contenedorHeader {
+  text-align: center;
+}
+
+.header .logo {
+  text-transform: uppercase;
+}
+
+.header .logo:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 /* MAIN INDEX */
-
-.contenidoIndex{
-    display: flex;
-    flex-direction: column;
-    padding: 0.5rem;
-    border: 0.2rem solid var(--verdeOscuro);
-    border-radius: 1rem;
-    text-transform: uppercase;
-    
-}
 .beige {
-    background-color: var(--beige);
+  background-color: #e9e5d6;
 }
-.kettlebellImg {
-    max-height: 25rem;
+
+.beige .contenidoIndex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0.5rem;
+  border: 0.2rem solid #464e2e;
+  border-radius: 1rem;
+  text-transform: uppercase;
 }
-.nordicImg {
-    max-height: 25rem;
+
+.beige .kettlebellImg {
+  max-height: 25rem;
 }
-.kayakImg {
-    width: 60%;
+
+.beige .nordicImg {
+  max-height: 25rem;
+}
+
+.beige .kayakImg {
+  width: 60%;
 }
 
 @media (min-width: 768px) {
-    .beige {
-        background-color: var(--beige);
-    }
-    
-    .contenidoIndex {
-        background-color: var(--beige);
-        text-align: center;
-        padding: 0.5rem;
-        border: 0.2rem solid var(--verdeOscuro);
-        border-radius: 1rem;
-        
-        text-transform: uppercase;
-        display: grid;
+  .beige {
+    background-color: #e9e5d6;
+  }
+  .beige .contenidoIndex {
+    background-color: #e9e5d6;
+    text-align: center;
+    padding: 0.5rem;
+    border: 0.2rem solid #464e2e;
+    border-radius: 1rem;
+    text-transform: uppercase;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (2fr)[2];
         grid-template-columns: repeat(2, 2fr);
+    -ms-grid-rows: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
-        grid-template-areas: 
-        "kettlebell nordic"
-        "kayak kayak"
-        ;
-    }
-    .kettlebell {
-        grid-area: kettlebell;
-    }
-    .nordic {
-        grid-area: nordic;
-    }
-    .kayak {
-        grid-area: kayak;
-    }
-    .kettlebellImg {
-        max-height: 25rem;
-    }
-    .nordicImg {
-        max-height: 25rem;
-        
-    }
-    .kayakImg {
-        max-width: 50%;
-    }
+        grid-template-areas: "kettlebell nordic" "kayak kayak";
+  }
+  .beige .kettlebell {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: kettlebell;
+  }
+  .beige .nordic {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: nordic;
+  }
+  .beige .kayak {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: kayak;
+  }
+  .beige .kettlebellImg {
+    max-height: 25rem;
+  }
+  .beige .nordicImg {
+    max-height: 25rem;
+  }
+  .beige .kayakImg {
+    max-width: 50%;
+  }
 }
 
 /* PAQUETES */
+.paquetes-texto {
+  margin-bottom: 0;
+  padding: 0.5rem;
+}
+
 .contenidoPaquetes {
-    padding-bottom: 1rem;
+  padding-bottom: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  background-color: #e9e5d6;
+}
+
+.texto-paquetes {
+  font-size: 1.2rem;
+}
+
+.bordePaquetes {
+  border: 3px solid #464e2e;
+  border-radius: 1rem;
+  padding: 0.5rem;
+}
+
+.kayakImgPaquetes {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .contenidoPaquetes {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: "kettlebell kayak nordic";
+    -webkit-column-gap: 1rem;
+            column-gap: 1rem;
     margin-left: 1rem;
     margin-right: 1rem;
-    background-color: var(--beige);
-}
-.texto-paquetes {
-    font-size: 1.2rem;
-}
-.bordePaquetes {
-    border: 3px solid var(--verdeOscuro);
-    border-radius: 1rem;
-    padding: 0.5rem;
-}
-.kayakImgPaquetes {
-    width: 100%;
-}
-@media (min-width: 768px) {
-    .contenidoPaquetes {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-areas: 
-        "kettlebell kayak nordic"
-        ;
-        column-gap: 1rem;
-        margin-left: 1rem;
-        margin-right: 1rem;
-    }
-    
+  }
 }
 
 /* OBJETIVO Y NOSOTROS */
 .mainTextoCentral {
-    padding: 2rem;
-}
-.texto-central {
-    padding-left: 4rem;
-    padding-right: 4rem;
-    font-size: 2rem;
+  padding: 2rem;
 }
 
-/* .tamaño-carousel {
-    width: 80%;
-    ali
-} */
+.texto-central {
+  padding-left: 4rem;
+  padding-right: 4rem;
+  font-size: 2rem;
+}
 
 /* CONTACTO */
-
 @media (min-width: 700px) {
-    .campo {
-        display: flex;
-        flex-direction: column;
-        border: 2px solid var(--verdeOscuro);
-        padding: 1.5rem;
-        font-size: 2rem;
-        font-family: var(--fuenteHeading);
-        margin: 1rem;
-    
-        background-image: url(../img/hoja.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        margin: 2rem 15rem 2rem 15rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: auto;
-        
-    }
-    .campo-label {
-        width: 90%;
-    }
-    .campo-input {
-        width: 90%;
-        height: 2rem;
-    }
-    .campo-textarea {
-        width: 90%;
-        height: 10rem;
-    }
-    .boton {
-        font-family: var(--fuenteHeading);
-        color: var(--blanco);
-        background-color: var(--verdeOscuro);
-        font-size: 1rem;
-        text-align: center;
-        padding: 1rem;
-        font-size: 1.8rem;
-        text-transform: uppercase;
-        margin-bottom: 1rem;
-        border: none;
-        cursor: pointer;
-    }
-    
-}
-@media (max-width: 700px) {
-    .campo {
-        display: flex;
-        flex-direction: column;
-        border: 2px solid var(--verdeOscuro);
-        border-radius: 1rem;
-        padding: 1.5rem;
-        font-size: 2rem;
-        font-family: var(--fuenteHeading);
-    }
-}
-.formulario {
-        display: flex;
-        flex-direction: column;
-        border: 2px solid var(--verdeOscuro);
-        border-radius: 1rem;
-        padding: 1.5rem;
-        font-size: 2rem;
-        font-family: var(--fuenteHeading);
-}
-.campo-label {
+  .campo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border: 2px solid #464e2e;
+    padding: 1.5rem;
+    font-size: 2rem;
+    font-family: "PT Sans", sans-serif;
+    margin: 1rem;
+    background-image: url(../img/hoja.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 2rem 15rem 2rem 15rem;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: auto;
+  }
+  .campo-label {
     width: 90%;
-}
-.campo-input {
+  }
+  .campo-input {
     width: 90%;
     height: 2rem;
-}
-.campo-textarea {
+  }
+  .campo-textarea {
     width: 90%;
     height: 10rem;
-}
-.boton {
-    font-family: var(--fuenteHeading);
-    color: var(--blanco);
-    background-color: var(--verdeClaro);
-    color: var(--verdeOscuro);
+  }
+  .boton {
+    font-family: "PT Sans", sans-serif;
+    color: #ffffff;
+    background-color: #464e2e;
     font-size: 1rem;
     text-align: center;
     padding: 1rem;
@@ -297,52 +305,113 @@ h4 {
     margin-bottom: 1rem;
     border: none;
     cursor: pointer;
+  }
 }
+
+@media (max-width: 700px) {
+  .campo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border: 2px solid #464e2e;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    font-size: 2rem;
+    font-family: "PT Sans", sans-serif;
+  }
+}
+
+.formulario {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 2px solid #464e2e;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  font-size: 2rem;
+  font-family: "PT Sans", sans-serif;
+}
+
+.campo-label {
+  width: 90%;
+}
+
+.campo-input {
+  width: 90%;
+  height: 2rem;
+}
+
+.campo-textarea {
+  width: 90%;
+  height: 10rem;
+}
+
+.boton {
+  font-family: "PT Sans", sans-serif;
+  color: #ffffff;
+  background-color: #acb992;
+  color: #464e2e;
+  font-size: 1rem;
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  border: none;
+  cursor: pointer;
+}
+
 .boton:hover {
-    transition: 1s;
-    background-color: var(--verdeOscuro);
-    color: var(--verdeClaro);
+  -webkit-transition: 1s;
+  transition: 1s;
+  background-color: #464e2e;
+  color: #acb992;
 }
 
 /* MOVIMIENTOS */
-.movimientos{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem 2rem 1rem 2rem;
-}
-.movimientos-texto {
-    padding: 2rem 10rem 2rem 10rem;
-    text-align: center;
-    font-size: 1.5rem;
-    font-weight: 700;
-}
-/* MOVIMIENTOS KAYAK */
-.movimientos-imagen-kayak {
-    max-height: 30rem;
-    width: 100%;
-}
-/* MOVIMIENTOS KETTLEBELL */
-.movimientos-imagen-kettlebell {
-    max-height: 30rem;
-    width: 100%;
-}
-/* MOVIMIENTOS NORDIC */
-.movimientos-imagen-nordic {
-    width: 100%;
-}
-/* FOOTER */
-.contenedorFooter {
-    background-color: var(--verdeClaro);
-    
-}
-.redesSociales {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    
-}
-.iconoPng {
-    height: 2.5rem;
+.movimientos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem 2rem 1rem 2rem;
 }
 
+.movimientos-texto {
+  padding: 2rem 10rem 2rem 10rem;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* MOVIMIENTOS KAYAK */
+.movimientos-imagen-kayak {
+  max-height: 30rem;
+  width: 100%;
+}
+
+/* MOVIMIENTOS KETTLEBELL */
+.movimientos-imagen-kettlebell {
+  max-height: 30rem;
+  width: 100%;
+}
+
+/* MOVIMIENTOS NORDIC */
+.movimientos-imagen-nordic {
+  width: 100%;
+}
+/*# sourceMappingURL=style.css.map */
