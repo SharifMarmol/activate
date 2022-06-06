@@ -1,0 +1,31 @@
+/* MOVIMIENTOS */
+.movimientos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 2rem 1rem 2rem;
+}
+.movimientos-texto {
+    padding: 2rem 10rem 2rem 10rem;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+/* MOVIMIENTOS KAYAK */
+
+.movimientosExtend {
+    width: 60%;
+}
+.movimientos-imagen-kayak {
+    @extend.movimientosExtend;
+    max-height: 30rem;
+}
+/* MOVIMIENTOS KETTLEBELL */
+.movimientos-imagen-kettlebell {
+    @extend.movimientosExtend;
+    max-height: 30rem;
+}
+/* MOVIMIENTOS NORDIC */
+.movimientos-imagen-nordic {
+    @extend.movimientosExtend;
+}

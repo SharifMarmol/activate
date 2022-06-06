@@ -175,7 +175,8 @@ h4 {
         grid-template-columns: repeat(2, 2fr);
     -ms-grid-rows: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
-        grid-template-areas: "kettlebell nordic" "kayak kayak";
+        grid-template-areas: "kettlebell nordic"
+ "kayak kayak";
   }
   .beige .kettlebell {
     -ms-grid-row: 1;
@@ -399,19 +400,18 @@ h4 {
 }
 
 /* MOVIMIENTOS KAYAK */
+.movimientosExtend, .movimientos-imagen-kayak, .movimientos-imagen-kettlebell, .movimientos-imagen-nordic {
+  width: 60%;
+}
+
 .movimientos-imagen-kayak {
   max-height: 30rem;
-  width: 100%;
 }
 
 /* MOVIMIENTOS KETTLEBELL */
 .movimientos-imagen-kettlebell {
   max-height: 30rem;
-  width: 100%;
 }
 
 /* MOVIMIENTOS NORDIC */
-.movimientos-imagen-nordic {
-  width: 100%;
-}
 /*# sourceMappingURL=style.css.map */
