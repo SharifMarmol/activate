@@ -9,7 +9,7 @@ html {
 
 p {
     font-family: $fuenteParrafos;
-    
+    font-size: 1.2rem;
 }
 h1,h2,h3,h4,h5 {
     font-family: $fuenteHeading;
@@ -27,6 +27,9 @@ figcaption {
     color: $negro;
     font-weight: 550;
 }
+figure {
+    margin: 0;
+  }
 h1 {
     font-size: 3rem;
     color: $negro;

@@ -10,6 +10,7 @@ html {
 
 p {
   font-family: "Open Sans", sans-serif;
+  font-size: 1.2rem;
 }
 
 h1, h2, h3, h4, h5 {
@@ -28,6 +29,9 @@ figcaption {
   font-family: "PT Sans", sans-serif;
   color: #000000;
   font-weight: 550;
+}
+figure {
+  margin: 0;
 }
 
 h1 {
