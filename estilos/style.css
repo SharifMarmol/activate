@@ -30,6 +30,7 @@ figcaption {
   color: #000000;
   font-weight: 550;
 }
+
 figure {
   margin: 0;
 }
@@ -83,22 +84,7 @@ h4 {
 }
 
 /* HEADER */
-@media (min-width: 768px) {
-  .contenedorHeader {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    padding: 0.5rem 1rem 0.5rem 1rem;
-  }
-}
-
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .nav {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -114,6 +100,27 @@ h4 {
   background-color: #acb992;
 }
 
+.header .contenedorHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+}
+
+.header .barra-activate {
+  font-weight: bold;
+}
+
 .header .nav-link {
   color: #000000;
 }
@@ -122,11 +129,11 @@ h4 {
   text-align: center;
 }
 
-.header .logo {
+.header .barra {
   text-transform: uppercase;
 }
 
-.header .logo:hover {
+.header .barra:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
@@ -162,7 +169,7 @@ h4 {
   width: 60%;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 800px) {
   .beige {
     background-color: #e9e5d6;
   }
@@ -179,8 +186,7 @@ h4 {
         grid-template-columns: repeat(2, 2fr);
     -ms-grid-rows: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
-        grid-template-areas: "kettlebell nordic"
- "kayak kayak";
+        grid-template-areas: "kettlebell nordic" "kayak kayak";
   }
   .beige .kettlebell {
     -ms-grid-row: 1;
@@ -291,12 +297,12 @@ h4 {
     width: 90%;
   }
   .campo-input {
-    width: 90%;
     height: 2rem;
+    width: 90%;
   }
   .campo-textarea {
+    height: 5rem;
     width: 90%;
-    height: 10rem;
   }
   .boton {
     font-family: "PT Sans", sans-serif;
