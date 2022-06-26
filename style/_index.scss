@@ -1,6 +1,6 @@
 /* HEADER */
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
     .nav {
         display: flex;
         flex-direction: column;
@@ -44,48 +44,22 @@
 .beige {
     background-color: $beige;
 
-    .contenidoIndex{
-        display: flex;
-        flex-direction: column;
-        padding: 0.5rem;
+    .contenidoIndex {
+        margin: 1rem;
+        padding: 1rem;
         border: 0.2rem solid $verdeOscuro;
         border-radius: 1rem;
-        text-transform: uppercase;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "kettlebell nordic"
+        "kayak kayak";
+        column-gap: 0.5rem;
         
-    }
-    
-    .kettlebellImg {
-        max-height: 25rem;
-    }
-    .nordicImg {
-        max-height: 25rem;
-    }
-    .kayakImg {
-        width: 60%;
-    }
-    
-}
 
-@media (min-width: 800px) {
-    .beige {
-        background-color: $beige;
-
-        .contenidoIndex {
-            background-color: $beige;
-            text-align: center;
-            padding: 0.5rem;
-            border: 0.2rem solid $verdeOscuro;
-            border-radius: 1rem;
-            
-            
-            text-transform: uppercase;
-            display: grid;
-            grid-template-columns: repeat(2, 2fr);
-            grid-template-rows: 1fr 1fr;
-            grid-template-areas: 
-            "kettlebell nordic"
-            "kayak kayak"
-            ;
+        .kayak {
+            grid-area: kayak;
         }
         .kettlebell {
             grid-area: kettlebell;
@@ -93,18 +67,68 @@
         .nordic {
             grid-area: nordic;
         }
-        .kayak {
-            grid-area: kayak;
-        }
         .kettlebellImg {
             max-height: 25rem;
+            width: 100%;
+
+        }
+        .kayakImg {
+            max-height: 25rem;
+            width: 50%;
+
         }
         .nordicImg {
             max-height: 25rem;
-        }
-        .kayakImg {
-            max-width: 50%;
+            width: 100%;
         }
     }
 
+}
+@media (max-width: 1000px){
+    .beige {
+        background-color: $beige;
+    
+        .contenidoIndex {
+            
+            display: flex;
+            flex-direction: column;
+            
+            .kettlebellImg {
+                max-height: 25rem;
+                width: auto;
+    
+            }
+            .kayakImg {
+                max-height: 25rem;
+                width: auto;
+    
+            }
+            .nordicImg {
+                max-height: 25rem;
+                width: auto;
+            }
+        }
+    
+    }
+}
+
+@media(max-width: 700px) {
+    .beige {
+        .contenidoIndex {
+            .kettlebellImg {
+                max-height: 25rem;
+                width: 100%;
+        
+            }
+            .kayakImg {
+                max-height: 25rem;
+                width: 100%;
+        
+            }
+            .nordicImg {
+                max-height: 25rem;
+                width: 100%;
+            }
+        }
+    }
 }
